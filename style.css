@@ -19,6 +19,7 @@ main {
     background-image: url('code.png');
     background-size: 120% 50%;
     filter: blur(3px);
+    padding-bottom: 40px;
 }
 
 #bg-text {
@@ -40,7 +41,7 @@ main {
 
 #bg-text > button {
     width: 200px;
-    height: 80px;
+    height: 70px;
     background-color: rgb(27, 27, 27);
     color: rgb(245, 237, 237);
     font-size: 1.5rem;
@@ -69,7 +70,7 @@ main {
 #intro-columns {
     margin: 30px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     width: 60%;
     column-gap: 50px;
     font-size: 1.5rem;
@@ -83,4 +84,14 @@ main {
 #info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+  #bg-text > button {
+      width: 100px;
+      height: 40px;
+  }
 }
