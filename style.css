@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+main {
+    display: grid;
+}
+
+#welcome {
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+#bg-img {
+    height: 70vh;
+    background-image: url('code.png');
+    background-size: 120% 50%;
+    filter: blur(3px);
+}
+
+#bg-text {
+    width: 50%;
+    position: absolute;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 3rem;
+}
+
+#bg-text > p {
+    font-size: 1.5rem;
+}
+
+#bg-text > button {
+    width: 200px;
+    height: 80px;
+    background-color: rgb(27, 27, 27);
+    color: rgb(245, 237, 237);
+    font-size: 1.5rem;
+    border: 1px solid silver;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#bg-text > button:hover {
+    background-color: white;
+    color: black;
+}
+
+#intro {
+    color: black;
+    background-color: rgb(243, 241, 237);
+    padding-top: 50px;
+    display: grid;
+}
+
+#intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#intro-columns {
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    width: 60%;
+    column-gap: 50px;
+    font-size: 1.5rem;
+}
+
+#services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
