@@ -9,6 +9,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--black)
 }
 
 main {
@@ -59,7 +61,7 @@ main {
     transition: all 0.2s ease-in;
 }
 
-#bg-text > button:hover {
+#welcome-button:hover {
     background-color: var(--white);
     color: var(--black);
 }
@@ -88,39 +90,38 @@ main {
     font-size: var(--desc);
 }
 
- #services-container {
-    padding: 30px 15px;
+#services-container {
+    display: grid;
+    padding: 50px 15px;
     background-color: var(--black);
 }
 
 #services {
     display: grid;
+    justify-self: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 20px;
-    column-gap: 20px;
-    /* outline: 1px solid yellow; */
-    /* width: 100%; */
-    margin: auto;
+    column-gap: 15px;
 }
-
 
 #services > div {
     display: grid;
-    row-gap: 50px;
-    /* 
+    border: 1px solid silver;
+    border-radius: 10px;
+    row-gap: 50px; 
     padding-bottom: 30px;
-    column-gap: 20px;
-    justify-items: center; */
     background-color: var(--white);
 } 
 
 .img-services {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 200px;
     width: 100%;
 }
 
 .text-services {
-    width: 70%;
+    width: 80%;
     margin: 10px auto;
 }
 
@@ -139,7 +140,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   html {
     font-size: 12px;
   }
