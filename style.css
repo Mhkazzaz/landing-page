@@ -1,6 +1,7 @@
 :root {
     --black: rgb(41, 39, 39);
     --white: rgb(235, 235, 235);
+    --blue: rgb(23, 122, 184);
     --title: 2rem;
     --desc: 1.5rem;
 }
@@ -11,6 +12,14 @@ body {
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--black)
+}
+
+.title {
+    font-size: var(--title);
+}
+
+.desc {
+    font-size: var(--desc);
 }
 
 main {
@@ -135,9 +144,56 @@ main {
     font-weight: bold;
 } 
 
+#outro-container {
+    padding: 100px 30px;
+    background-color: var(--white);
+}
+
+#outro-title {
+    font-size: var(--title);
+}
+
+#outro-desc {
+    font-size: var(--desc);
+    width: 60%;
+    margin: 1em auto;
+}
+
 #info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    color: white;
+}
+
+#contact {
+    background-color: var(--blue);
+    padding: 50px;
+}
+
+#about {
+    background-color: var(--black);
+    padding: 50px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: black;
+    color: var(--white);
+    padding: 30px;
+    justify-content: space-between;
+    font-size: var(--desc);
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+#email {
+    color: var(--white);
+    font-size: var(--desc);
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 800px) {
