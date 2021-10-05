@@ -2,8 +2,8 @@
     --black: rgb(41, 39, 39);
     --white: rgb(235, 235, 235);
     --blue: rgb(23, 122, 184);
-    --title: 2rem;
-    --desc: 1.5rem;
+    --title: 1.6rem;
+    --font-size: 1.4rem;
 }
 
 body {
@@ -11,19 +11,18 @@ body {
     padding: 0;
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--black)
-}
-
-.title {
-    font-size: var(--title);
-}
-
-.desc {
-    font-size: var(--desc);
+    color: var(--black);
+    background-color: var(--white);
+    font-size: var(--font-size);
 }
 
 main {
     display: grid;
+}
+
+.title {
+    font-size: var(--title);
+    font-weight: bold;
 }
 
 #welcome {
@@ -48,23 +47,13 @@ main {
     transform: translate(-50%, -50%);
 }
 
-#welcome-title {
-    font-size: var(--title);
-    font-weight: bold;
-}
-
-#bg-text > p {
-    width: 80%;
-    margin: 1em auto;
-    font-size: var(--desc);
-}
-
 #welcome-button {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 200px;
     height: 70px;
     background-color: var(--black);
     color: var(--white);
-    font-size: var(--desc);
+    font-size: var(--font-size);
     border: 1px solid silver;
     cursor: pointer;
     transition: all 0.2s ease-in;
@@ -77,43 +66,27 @@ main {
 
 #intro {
     display: grid;
-    color: var(--black);
-    background-color: var(--white);
-    padding: 50px 0;
-}
-
-#intro-title {
-    font-size: var(--title);
-    font-weight: bold;
-    width: 90%;
-    margin: auto;
+    padding: 50px;
+    justify-content: center;
 }
 
 #intro-columns {
-    width: 70%;
-    margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     column-gap: 50px;
-    row-gap: 20px;
-    font-size: var(--desc);
 }
 
 #services-container {
     display: grid;
+    justify-content: center;
     padding: 50px 15px;
     background-color: var(--black);
-}
-
-#services {
-    display: grid;
-    justify-self: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 20px;
     column-gap: 15px;
 }
 
-#services > div {
+#services-container > div {
     display: grid;
     border: 1px solid silver;
     border-radius: 10px;
@@ -135,26 +108,15 @@ main {
 }
 
 .text-services > p {
-    font-size: var(--desc);
     margin: 50px 0;
 }
-
-.title-services {
-    font-size: var(--title);
-    font-weight: bold;
-} 
 
 #outro-container {
     padding: 100px 30px;
     background-color: var(--white);
 }
 
-#outro-title {
-    font-size: var(--title);
-}
-
-#outro-desc {
-    font-size: var(--desc);
+#outro-text {
     width: 60%;
     margin: 1em auto;
 }
@@ -182,7 +144,6 @@ footer {
     color: var(--white);
     padding: 30px;
     justify-content: space-between;
-    font-size: var(--desc);
 }
 
 a {
@@ -192,7 +153,6 @@ a {
 
 #email {
     color: var(--white);
-    font-size: var(--desc);
     text-decoration: underline;
 }
 
@@ -207,7 +167,10 @@ a {
 }
 
 @media only screen and (min-width: 1440px) {
-    #services, #intro-columns, #bg-text {
-        width: 70vw;
+        #intro-columns {
+        padding: 0 250px;
+    }
+    #services-container {
+        padding: 50px 250px;
     }
 }
